@@ -1,0 +1,30 @@
+/* Match screenshot design */
+
+body {
+    background-color: #808080; /* gray background */
+    font-family: "Times New Roman", Times, serif;
+    text-align: left;
+    padding: 40px;
+    color: black;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+button {
+    background-color: #d3d3d3; /* light gray button */
+    border: 1px solid #999;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #c0c0c0;
+}
