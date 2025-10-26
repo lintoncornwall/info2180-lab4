@@ -1,30 +1,116 @@
-/* Match screenshot design */
-
+/* === Overall Page Layout === */
 body {
-    background-color: #808080; /* gray background */
-    font-family: "Times New Roman", Times, serif;
-    text-align: left;
-    padding: 40px;
-    color: black;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-h1 {
-    font-size: 2.5em;
-    font-weight: bold;
+/* === Header Section === */
+header {
+    background-color: #337ab7;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* === Main Layout === */
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* === Search Section === */
+.search-section {
     margin-bottom: 40px;
 }
 
-button {
-    background-color: #d3d3d3; /* light gray button */
-    border: 1px solid #999;
-    border-radius: 4px;
-    padding: 6px 12px;
-    font-size: 1em;
-    cursor: pointer;
-    font-family: "Times New Roman", Times, serif;
+.search-section label {
+    display: block;
     font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+}
+
+#searchField {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#searchField::placeholder {
+    color: #999;
+}
+
+button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #c0c0c0;
+    background-color: #c9302c;
+}
+
+/* === Result Section === */
+.result-section h2 {
+    color: #1a1a1a;
+    margin-bottom: 5px;
+}
+
+.result-section hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+#result {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#result h3 {
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+#result h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+#result p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+#result ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }

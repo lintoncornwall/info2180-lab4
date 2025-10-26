@@ -7,8 +7,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Avengers Character Search</h1>
-    <button id="searchBtn">Search</button>
+    <header>
+        <h1>AVENGERS CHARACTER SEARCH</h1>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <label for="searchField">Search by Full Name or Alias</label>
+            <div class="search-bar">
+                <input type="text" id="searchField" placeholder="e.g. Captain America or Steve Rogers">
+                <button id="searchBtn">Search</button>
+            </div>
+        </section>
+
+        <section class="result-section">
+            <h2>RESULT</h2>
+            <hr>
+            <div id="result"></div>
+        </section>
+    </main>
 
     <script src="app.js"></script>
 </body>

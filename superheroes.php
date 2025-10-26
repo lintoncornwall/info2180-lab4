@@ -63,10 +63,36 @@ $superheroes = [
   ], 
 ];
 
-?>
+// ------------------------------------------------------------
+// Exercise 3 logic starts here
+// ------------------------------------------------------------
+$query = isset($_GET['query']) ? trim($_GET['query']) : '';
 
-<ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
-</ul>
+// If query is empty, show full list
+if ($query === '') {
+    echo "<ul>";
+    foreach ($superheroes as $superhero) {
+        echo "<li>{$superhero['alias']}</li>";
+    }
+    echo "</ul>";
+    exit;
+}
+
+// Search for a match (case-insensitive)
+$found = null;
+foreach ($superheroes as $superhero) {
+    if (strcasecmp($superhero['name'], $query) === 0 || strcasecmp($superhero['alias'], $query) === 0) {
+        $found = $superhero;
+        break;
+    }
+}
+
+// Output result
+if ($found) {
+    echo "<h3>{$found['alias']}</h3>";
+    echo "<h4>A.K.A {$found['name']}</h4>";
+    echo "<p>{$found['biography']}</p>";
+} else {
+    echo "<p style='color:red; font-weight:bold;'>SUPERHERO NOT FOUND</p>";
+}
+?>
