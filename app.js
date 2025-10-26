@@ -1,5 +1,3 @@
-// INFO2180 Lab 4 - Exercise 3
-// AJAX superhero search
 
 document.addEventListener("DOMContentLoaded", () => {
     const button = document.getElementById("searchBtn");
