@@ -1,5 +1,4 @@
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const button = document.getElementById("searchBtn");
     const input = document.getElementById("searchField");
